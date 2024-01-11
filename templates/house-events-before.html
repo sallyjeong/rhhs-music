@@ -1,0 +1,153 @@
+<!-- <!DOCTYPE HTML>
+
+<html>
+
+<head>
+	{% include 'header.html' %}
+
+      <!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>House Events</h2>
+							<p>RHHS Music hosts monthly team-building exercises in the form of trivia games and competitions. This is an opportunity <br>for students to bond and de-stress outside of the musical arts. See the gallery below for previous house events!</p>
+						</header>
+        </div>
+        <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext"><!--1 / 6--></div>
+  <img src='images/House Kickoff.png' alt='House Kickoff'>
+<!--  <div class="text">Caption Text</div>-->
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"><!--2 / 6--></div>
+  <img src='images/House Trivia.png' alt='House Trivia'>
+<!--  <div class="text">Caption Two</div>-->
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"><!--3 / 6--></div>
+  <img src='images/Practice Stories.png' alt='Practice Stories'>
+<!--  <div class="text">Caption Three</div>-->
+</div>
+<div class="mySlides fade">
+  <div class="numbertext"><!--4 / 6--></div>
+  <img src='images/Scavenger Hunt.png' alt='Scavenger Hunt'>
+<!--  <div class="text">Caption Three</div>-->
+</div>
+<div class="mySlides fade">
+  <div class="numbertext"><!--5 / 6--></div>
+  <img src='images/Nonstop Shop.png' alt='Nonstop Shop'>
+<!--  <div class="text">Caption Three</div>-->
+</div>
+<div class="mySlides fade">
+  <div class="numbertext"><!--6 / 6--></div>
+  <img src='images/Popsauce.png' alt='Popsauce'>
+<!--  <div class="text">Caption Three</div>-->
+</div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+          <!-- <div class="slide-container">
+              <div class="slide fade">
+              <img src='images/House Kickoff.png' alt='House Kickoff'>
+            </div>
+            <div class="slide fade">
+              <img src='images/House Trivia.png' alt='House Trivia'>
+            </div>
+            <div class="slide fade">
+              <img src='images/Practice Stories.png' alt='Practice Stories'>
+            </div>
+            <div class="slide fade">
+              <img src='images/Scavenger Hunt.png' alt='Scavenger Hunt'>
+            </div>
+            <div class="slide fade">
+              <img src='images/Nonstop Shop.png' alt='Nonstop Shop'>
+            </div>
+            <div class="slide fade">
+              <img src='images/Popsauce.png' alt='Popsauce'>
+            </div>
+
+            <a href="#" class="prev" title="Previous">&#10094</a>
+            <a href="#" class="next" title="Next">&#10095</a>
+          </div>
+          <div class="dots-container">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+      </div> -->
+			<!-- Footer -->
+				{% include 'footer.html' %}
+
+		</div>
+
+		<!-- Scripts -->
+			{% include 'scripts.html' %}
+    <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" live", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " live";
+      setTimeout(showSlides, 3000); // Change image every 2 seconds
+    }
+
+      // var currentSlide = 0;
+      // const slides = document.querySelectorAll(".slide")
+      // const dots = document.querySelectorAll('.dot')
+
+      // const init = (n) => {
+      //   slides.forEach((slide) => {
+      //     slide.style.display = "none"
+      //     dots.forEach((dot) => {
+      //       dot.classList.remove("live")
+      //     })
+      //   })
+      //   slides[n].style.display = "block"
+      //   dots[n].classList.add("live")
+      // }
+      // document.addEventListener("DOMContentLoaded", init(currentSlide))
+
+      // const next = () => {
+      //   currentSlide >= slides.length - 1 ? currentSlide = 0 : currentSlide++
+      //   init(currentSlide)
+      // }
+
+      // const prev = () => {
+      //   currentSlide <= 0 ? currentSlide = slides.length - 1 : currentSlide--
+      //   init(currentSlide)
+      // }
+
+      // document.querySelector(".next").addEventListener('click', next)
+      // document.querySelector(".prev").addEventListener('click', prev)
+    </script>
+	</body>
+</html>
+
+ -->

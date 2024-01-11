@@ -1,0 +1,11 @@
+quart
+quart-compress
+uvloop
+hypercorn[uvloop]
+google.oauth2
+google.auth.transport
+time
+secrets
+asyncio
+string
+nextcord

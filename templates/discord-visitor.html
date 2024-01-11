@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+
+<head>
+  {% include 'header.html' %}
+  
+  <section id="banner" style="background-image: url(&quot;../../images/IMG_1028.JPG&quot;);">
+		<div class="content">
+			<header>
+				<h2>Welcome, visitor!</h2>
+          <p>We're so glad you're interested in RHHS Music!</p>
+          <p>However, because of security and stuff, we just have to make sure you're not trying to get us fired, so please just wait a couple seconds before we let you in. And by the way, this is the visitor entrance to our server. If you're a RHHS Music student, this is not the right place — <a href='/discord'>go back</a>!</p>
+          <p>Anyways, assuming you're a visitor, here's how to verify properly: just click the satisfying button below, join our Discord server, and once you're in, navigate to the <code>#verify</code> channel and send the top-secret single-use code <code>{{ code }}</code> to verify. Don't forget that by joining, you're automatically agreeing to our server's <code>#rules</code>. See you on the other side!</p>
+          <br>
+          <ul class="actions right">
+						<input type="checkbox" name="read" id="read" value="" onclick="clicked()"/>
+            <label for="read">I've finished reading everything, let me in!</label>
+            <li><a href="https://discord.gg/qwpzB8NzbE" id='countdown' class="button disabled" target='_blank'></a></li>
+					</ul>
+			</header>
+		</div>
+	</section>
+  
+{% include 'footer.html' %}
+{% include 'scripts.html' %}
+
+<script>
+  var timeleft = 20;
+  var downloadTimer = setInterval(function(){
+    if(timeleft <= 0){
+      clearInterval(downloadTimer);
+      document.getElementById("countdown").innerHTML = "I said, LET ME IN!!";
+      if(document.getElementById("read").checked===true) {
+        document.getElementById("countdown").className = "button primary";
+      } 
+    } else {
+      document.getElementById("countdown").innerHTML = "Ready in " + timeleft + "s";
+    }
+    timeleft -= 1;
+  }, 1000);
+  function clicked() {
+	 if(timeleft <= 0){
+    if(document.getElementById("read").checked===false) { 
+      document.getElementById('countdown').className = 'button disabled'; 
+    } else { 
+      document.getElementById('countdown').className = 'button primary';
+      document.getElementById("countdown").innerHTML = "I said, LET ME IN!!";
+      }
+    }
+  }
+</script>
+
+</body>

@@ -1,0 +1,55 @@
+  <!DOCTYPE HTML>
+
+<html>
+<head>
+{% include 'header.html' %}
+
+    <section id="banner" style="background-image: url(&quot;../../images/IMG_2794.JPG&quot;);">
+      <div class="content">
+
+
+        <header>
+          <h2 id="timer" style="font-size: 5em;"></h2>
+          <h3>until 2022 Pumpkin Carving!</h3>
+        </header>
+      </div>
+      <a href="#calendar" class="goto-next scrolly">Next</a>
+    </section>
+
+
+    <section>
+      <div id="calendar" class="wrapper style1">
+        <div class="container">
+			    	<div class="row gtr-50 gtr-uniform">
+				    	<div class="col-12"><iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FToronto&src=bXVzY28ucmhoc0BnbWFpbC5jb20&color=%237986CB&showTitle=0"
+               style="border:solid 1px #777" width=100% height="600" frameborder="0" scrolling="no"></iframe></div>
+          </div> 
+        </div>
+      </div>
+
+<!-- calendar link with the title (musco.rhhs@gmail.com)
+"https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FToronto&src=bXVzY28ucmhoc0BnbWFpbC5jb20&color=%237986CB&showCalendars=0&showTabs=1" -->
+
+
+			<!-- Footer -->
+				{% include 'footer.html' %}
+
+		</div>
+
+		<!-- Scripts -->
+			{% include 'scripts.html' %}
+      <script>
+        var countDownDate = new Date("Oct 31, 2022 15:30:00").getTime();
+        var x = setInterval(function() {
+          var now = new Date().getTime();
+          var distance = countDownDate - now;
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.abs(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+          var minutes = Math.abs(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
+          var seconds = Math.abs(Math.floor((distance % (1000 * 60)) / 1000));
+          document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        }, 1000);
+      </script>
+
+	</body>
+</html>

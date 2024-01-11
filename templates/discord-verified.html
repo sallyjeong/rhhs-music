@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+
+<head>
+  {% include 'header.html' %}
+  
+  <section id="banner" style="background-image: url(&quot;../../images/IMG_1028.JPG&quot;);">
+		<div class="content">
+			<header>
+				<h2>Congrats, you're in!</h2>
+					<p>You've successfully proved you're a RHHS Music student, but <i>before</i> you join, <u>read this carefully!</u></p>
+          <p>You're going to need a verification code to join as a RHHS Music student. Once you join the server, navigate to the <code>#verify</code> channel and send your very own top-secret verification code: <code>{{ code }}</code> (case-sensitive). This code is <i>one-time use</i> to prevent shenanigans, so make sure not to share it with anybody and don't screw it up! Remember that by joining, you're automatically agreeing to our server's <code>#rules</code>.Thanks so much for reading and see you on the other side!</p>
+          <br>
+          <ul class="actions right">
+							<input type="checkbox" name="read" id="read" value="" onclick="clicked()"/>
+              <label for="read">I've finished reading everything, let me in!</label>
+              <li><a href="https://discord.gg/qwpzB8NzbE" class="button disabled large" target='_blank' id='doneButton'>Join the server (finally!)</a></li>
+					</ul>
+			</header>
+		</div>
+	</section>
+  
+{% include 'footer.html' %}
+{% include 'scripts.html' %}
+
+<script>
+  function clicked() {
+	 if(document.getElementById("read").checked===false) { 
+    document.getElementById('doneButton').className = 'button disabled large'; 
+  } else { 
+    document.getElementById('doneButton').className = 'button primary large';
+      }
+  }
+</script>
+
+</body>

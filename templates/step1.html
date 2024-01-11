@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+
+<head>
+  {% include 'header.html' %}
+  
+  <section id="banner" style="background-image: url(&quot;../../images/IMG_1028.JPG&quot;);">
+		<div class="content">
+			<header>
+				<h2>Awesome, welcome!</h2>
+					<p>We're so glad you chose to study music with us.</p>
+          <p>But unfortunately, as much as we'd like to, because of our trust issues, we can't just take your word for it. However, we'd be way more convinced if you pressed this cool-looking button here to sign in with your YRDSB GSuite account.</p>
+          <br>
+          <ul class="actions right">
+							<div id="g_id_onload"
+                data-client_id="1060749361997-4bl65nkgjct2p4puctfv4s4vnm9sai4u.apps.googleusercontent.com"
+                data-login_uri="/discord/step2"
+                data-auto_prompt="true">
+              </div>
+              <div class="g_id_signin"
+                data-type="standard"
+                data-size="large"
+                data-theme="outline"
+                data-text="sign_in_with"
+                data-shape="rectangular"
+                data-logo_alignment="left">
+              </div>
+					</ul>
+			</header>
+		</div>
+	</section>
+  
+  {% include 'footer.html' %}
+  {% include 'scripts.html' %}
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</body>
